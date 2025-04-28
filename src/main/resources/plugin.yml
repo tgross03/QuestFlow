@@ -1,0 +1,7 @@
+name: QuestFlow
+version: '0.1-SNAPSHOT'
+main: dev.edgetom.questFlow.QuestFlow
+api-version: '1.19'
+prefix: QuestFlow
+authors: [ Tom Groß ]
+description: A large-scale, modular and RPG-oriented quest framework.
