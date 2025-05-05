@@ -1,7 +1,9 @@
 package dev.edgetom.questFlow.base;
 
+import dev.edgetom.questFlow.QuestFlow;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.bukkit.entity.Player;
 
 import java.util.HashMap;
 import java.util.List;
@@ -11,12 +13,16 @@ import java.util.UUID;
 @AllArgsConstructor
 public abstract class Node {
 
+    private QuestFlow plugin;
+
     private UUID uuid;
 
     // full labels will have form quest_label:node:node_type:label
     private String label; // node labels must be unique per quest (!)
 
     private List<Trigger> triggers;
+
+    public abstract void onTrigger(Trigger trigger, Player player);
 
     public enum Type {
         ENTRY,
